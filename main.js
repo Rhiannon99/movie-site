@@ -6,7 +6,7 @@ var app = express();
 var fs = require('fs');
 const { nextTick } = require('process');
 var api_key = 'b239d10a14689b1e09956259e877b196'
-var port = process.env.PORT || 8080
+var port = process.env.PORT || 3000
 app.use(express.static('public'))
 app.use('/css', express.static(__dirname + 'public/css'))
 app.use('/img', express.static(__dirname + 'public/img'))
@@ -55,7 +55,7 @@ app.get("/view", (req, res) => {
         })
     })
 })
-app.listen(port, 'process.env.__dirname')
+app.listen(port)
 
 async function getTitle(title){
     
